@@ -2,8 +2,6 @@
 //  AppDelegate.swift
 //  last train
 //
-//  Created by 大河渡邉 on 2016/10/21.
-//  Copyright © 2016年 tiger. All rights reserved.
 //
 
 import UIKit
