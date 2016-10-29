@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         // Override point for customization after application launch.
         
         // background fetch
-        application.setMinimumBackgroundFetchInterval(Double(60 * 30))
+        application.setMinimumBackgroundFetchInterval(Double(10)) //TODO 一旦10秒(本当は60 * 30 )
         
         return true
     }
@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         
         // 20時以降に起動
-        if (hour >= 16) { //TODO
+        if (hour >= 20) {
             // フィールドの初期化
             lm = CLLocationManager()
             longitude = CLLocationDegrees()
@@ -60,6 +60,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             completionHandler(UIBackgroundFetchResult.noData);
         }
         
+        
+        
+        
+        // GPSの使用を停止する．停止しない限りGPSは実行され，指定間隔で更新され続ける．
+        //lm.stopUpdatingLocation()
+        // TODO どっかに止める処理を入れる
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -82,6 +88,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    
+    
+    /* 位置情報取得成功時に実行される関数 */
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let newLocation = locations.last
+        // 取得した緯度がnewLocation.coordinate.longitudeに格納されている
+        let latitude = newLocation!.coordinate.latitude
+        // 取得した経度がnewLocation.coordinate.longitudeに格納されている
+        let longitude = newLocation!.coordinate.longitude
+        // TODO
+        // 取得した緯度・経度をLogに表示
+        NSLog("latiitude: \(latitude) , longitude: \(longitude)")
+        
+        LastTrain.getNearTrainStop(latitude: latitude, longitude: longitude)
+        LastTrain.getLastTrainTime()
+        
+        UIApplication.shared.cancelAllLocalNotifications()
+        
+        //通知登録前のおまじない
+        //これがないとpermissionエラーが発生する
+        let settings = UIUserNotificationSettings(types: [.alert, .badge , .sound], categories: nil)
+        UIApplication.shared.registerUserNotificationSettings(settings)
+        
+        //通知の設定
+        let notification:UILocalNotification = UILocalNotification()
+        notification.fireDate = Date(timeIntervalSinceNow: 10)
+        notification.timeZone = TimeZone.autoupdatingCurrent
+        notification.alertBody = "10秒たちました"
+        notification.alertAction = "はい"
+        notification.soundName = UILocalNotificationDefaultSoundName
+        
+        //通知登録
+        UIApplication.shared.scheduleLocalNotification(notification)
+        
+        lm.stopUpdatingLocation()
+        
+    }
+    
+    /* 位置情報取得失敗時に実行される関数 */
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        // この例ではLogにErrorと表示するだけ．
+        NSLog("Error")
     }
     
 }

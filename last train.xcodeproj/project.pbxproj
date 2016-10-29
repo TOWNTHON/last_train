@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		095E203788BBE8426F3E2547 /* Pods_last_train.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7AE25777489C462FE3519D /* Pods_last_train.framework */; };
 		19435EBF1DC4571100D4B393 /* LastTrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19435EBE1DC4571100D4B393 /* LastTrain.swift */; };
-		19435EC11DC47D6200D4B393 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19435EC01DC47D6200D4B393 /* LocationManager.swift */; };
 		194D9DB51DBA62F500DF11F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194D9DB41DBA62F500DF11F6 /* AppDelegate.swift */; };
 		194D9DB71DBA62F500DF11F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194D9DB61DBA62F500DF11F6 /* ViewController.swift */; };
 		194D9DBA1DBA62F500DF11F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194D9DB81DBA62F500DF11F6 /* Main.storyboard */; };
@@ -19,7 +18,6 @@
 
 /* Begin PBXFileReference section */
 		19435EBE1DC4571100D4B393 /* LastTrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastTrain.swift; sourceTree = "<group>"; };
-		19435EC01DC47D6200D4B393 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		194D9DB11DBA62F500DF11F6 /* last train.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "last train.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		194D9DB41DBA62F500DF11F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		194D9DB61DBA62F500DF11F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				194D9DBD1DBA62F500DF11F6 /* LaunchScreen.storyboard */,
 				194D9DC01DBA62F500DF11F6 /* Info.plist */,
 				19435EBE1DC4571100D4B393 /* LastTrain.swift */,
-				19435EC01DC47D6200D4B393 /* LocationManager.swift */,
 			);
 			path = "last train";
 			sourceTree = "<group>";
@@ -222,7 +219,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19435EC11DC47D6200D4B393 /* LocationManager.swift in Sources */,
 				194D9DB71DBA62F500DF11F6 /* ViewController.swift in Sources */,
 				19435EBF1DC4571100D4B393 /* LastTrain.swift in Sources */,
 				194D9DB51DBA62F500DF11F6 /* AppDelegate.swift in Sources */,
@@ -269,6 +265,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -319,6 +316,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -348,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 643696006286855AA14FC4F2 /* Pods-last train.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "last train/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -361,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DBF606CBF9EB6040D9508C64 /* Pods-last train.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "last train/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
