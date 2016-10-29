@@ -31,8 +31,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var MyTrainStopName: UITextField!
+    
     @IBAction func myTrainStopSetButton(sender: AnyObject) {
-        dispMyTrainStopLabel.text = "設定済み"
+        let ud = UserDefaults.standard
+        ud.set(MyTrainStopName.text, forKey: "myTrainStopName")
+        ud.synchronize()
+        dispMyTrainStopLabel.text = ud.object(forKey: "myTrainStopName") as? String
     }
     
     /* 位置情報取得成功時に実行される関数 */
@@ -46,8 +51,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // 取得した緯度・経度をLogに表示
         NSLog("latiitude: \(latitude) , longitude: \(longitude)")
         
-        LastTrain.getNearTrainStop(latitude: latitude, longitude: longitude)
-        LastTrain.getLastTrainTime()
+        //LastTrain.getNearTrainStop(latitude: latitude, longitude: longitude)
+        //LastTrain.getLastTrainTime()
         
         // GPSの使用を停止する．停止しない限りGPSは実行され，指定間隔で更新され続ける．
         lm.stopUpdatingLocation()
