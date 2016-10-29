@@ -5,16 +5,61 @@
 //
 
 import UIKit
+import Foundation
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
 
-
+    // 現在地の位置情報の取得にはCLLocationManagerを使用
+    var lm: CLLocationManager!
+    // 取得した緯度を保持するインスタンス
+    var latitude: CLLocationDegrees!
+    // 取得した経度を保持するインスタンス
+    var longitude: CLLocationDegrees!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // background fetch
+        application.setMinimumBackgroundFetchInterval(Double(60 * 30))
+        
         return true
+    }
+        
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: Date())
+        
+        
+        // 20時以降に起動
+        if (hour >= 20) {
+            // フィールドの初期化
+            lm = CLLocationManager()
+            longitude = CLLocationDegrees()
+            latitude = CLLocationDegrees()
+            
+            // CLLocationManagerをDelegateに指定
+            lm.delegate = self
+            
+            // 位置情報取得の許可を求めるメッセージの表示．必須．
+            lm.requestAlwaysAuthorization()
+            // 位置情報の精度を指定．任意，
+            // lm.desiredAccuracy = kCLLocationAccuracyBest
+            // 位置情報取得間隔を指定．指定した値（メートル）移動したら位置情報を更新する．任意．
+            // lm.distanceFilter = 1000
+            
+            // GPSの使用を開始する
+            lm.startUpdatingLocation()
+         
+            completionHandler(UIBackgroundFetchResult.newData);
+        } else {
+            completionHandler(UIBackgroundFetchResult.noData);
+        }
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -38,7 +83,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
 }
 

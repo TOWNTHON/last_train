@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		095E203788BBE8426F3E2547 /* Pods_last_train.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7AE25777489C462FE3519D /* Pods_last_train.framework */; };
+		19435EBF1DC4571100D4B393 /* LastTrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19435EBE1DC4571100D4B393 /* LastTrain.swift */; };
 		194D9DB51DBA62F500DF11F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194D9DB41DBA62F500DF11F6 /* AppDelegate.swift */; };
 		194D9DB71DBA62F500DF11F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194D9DB61DBA62F500DF11F6 /* ViewController.swift */; };
 		194D9DBA1DBA62F500DF11F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194D9DB81DBA62F500DF11F6 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19435EBE1DC4571100D4B393 /* LastTrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastTrain.swift; sourceTree = "<group>"; };
 		194D9DB11DBA62F500DF11F6 /* last train.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "last train.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		194D9DB41DBA62F500DF11F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		194D9DB61DBA62F500DF11F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				194D9DBB1DBA62F500DF11F6 /* Assets.xcassets */,
 				194D9DBD1DBA62F500DF11F6 /* LaunchScreen.storyboard */,
 				194D9DC01DBA62F500DF11F6 /* Info.plist */,
+				19435EBE1DC4571100D4B393 /* LastTrain.swift */,
 			);
 			path = "last train";
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				194D9DB71DBA62F500DF11F6 /* ViewController.swift in Sources */,
+				19435EBF1DC4571100D4B393 /* LastTrain.swift in Sources */,
 				194D9DB51DBA62F500DF11F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
