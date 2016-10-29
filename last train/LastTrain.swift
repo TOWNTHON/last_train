@@ -12,7 +12,7 @@ import CoreLocation
 
 class LastTrain {
     
-    public func getNearTrainStop(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+    static public func getNearTrainStop(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         
         let parameters: [String: Any] = ["latitude":latitude, "longitude":longitude, "output":"json"]
         
@@ -36,7 +36,7 @@ class LastTrain {
         }
     }
     
-    public func getLastTrainTime() {
+    static public func getLastTrainTime() {
         let ud = UserDefaults.standard
         
         if let nearTrainStopName: String = ud.object(forKey: "nearTrainStopName") as? String {
@@ -74,7 +74,7 @@ class LastTrain {
     }
     
     // 正規表現にマッチした文字列を格納した配列を返す
-    func getMatchStrings(targetString: String, pattern: String) -> [String] {
+    static func getMatchStrings(targetString: String, pattern: String) -> [String] {
         
         var matchStrings:[String] = []
         
