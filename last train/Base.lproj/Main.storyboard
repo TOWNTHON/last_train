@@ -80,15 +80,27 @@
                     <view key="view" contentMode="scaleToFill" id="AI6-1k-coZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinderella_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="6mg-Rf-FNW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinderella_02-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="UDI-ou-AyJ">
+                                <rect key="frame" x="119" y="456" width="147.5" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oab-r5-Wxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="25"/>
+            <point key="canvasLocation" x="1088.8" y="24.7376311844078"/>
         </scene>
     </scenes>
     <resources>
         <image name="cinderella_01.png" width="375" height="667"/>
+        <image name="cinderella_02-1.png" width="147" height="15"/>
+        <image name="cinderella_02.png" width="375" height="667"/>
     </resources>
 </document>

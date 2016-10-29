@@ -18,6 +18,7 @@
 		4E7A992A1DC50F8000320075 /* cinderella_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E7A99261DC50F8000320075 /* cinderella_02@2x.png */; };
 		4E7A992B1DC50F8000320075 /* cinderella_02-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E7A99271DC50F8000320075 /* cinderella_02-1@2x.png */; };
 		4E7A992C1DC50F8000320075 /* cinderella@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E7A99281DC50F8000320075 /* cinderella@2x.png */; };
+		4E7A992E1DC5120C00320075 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A992D1DC5120C00320075 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4E7A99261DC50F8000320075 /* cinderella_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cinderella_02@2x.png"; path = "../../../Downloads/cinderella_02@2x.png"; sourceTree = "<group>"; };
 		4E7A99271DC50F8000320075 /* cinderella_02-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cinderella_02-1@2x.png"; path = "../../../Downloads/cinderella_02-1@2x.png"; sourceTree = "<group>"; };
 		4E7A99281DC50F8000320075 /* cinderella@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cinderella@2x.png"; path = "../../../Downloads/cinderella@2x.png"; sourceTree = "<group>"; };
+		4E7A992D1DC5120C00320075 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		643696006286855AA14FC4F2 /* Pods-last train.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-last train.debug.xcconfig"; path = "Pods/Target Support Files/Pods-last train/Pods-last train.debug.xcconfig"; sourceTree = "<group>"; };
 		AD7AE25777489C462FE3519D /* Pods_last_train.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_last_train.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF606CBF9EB6040D9508C64 /* Pods-last train.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-last train.release.xcconfig"; path = "Pods/Target Support Files/Pods-last train/Pods-last train.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				194D9DBD1DBA62F500DF11F6 /* LaunchScreen.storyboard */,
 				194D9DC01DBA62F500DF11F6 /* Info.plist */,
 				19435EBE1DC4571100D4B393 /* LastTrain.swift */,
+				4E7A992D1DC5120C00320075 /* MainViewController.swift */,
 			);
 			path = "last train";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				194D9DB71DBA62F500DF11F6 /* ViewController.swift in Sources */,
 				19435EBF1DC4571100D4B393 /* LastTrain.swift in Sources */,
 				194D9DB51DBA62F500DF11F6 /* AppDelegate.swift in Sources */,
+				4E7A992E1DC5120C00320075 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
