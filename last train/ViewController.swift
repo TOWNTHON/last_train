@@ -24,11 +24,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var MyTrainStopName: UITextField!
     
+    @IBOutlet weak var walkingTime: UITextField!
+    
     @IBAction func myTrainStopSetButton(sender: AnyObject) {
         let ud = UserDefaults.standard
         ud.set(MyTrainStopName.text, forKey: "myTrainStopName")
+        ud.set(walkingTime.text, forKey: "walkingTime")
         ud.synchronize()
-        dispMyTrainStopLabel.text = ud.object(forKey: "myTrainStopName") as? String
+         //TODO 駅名がみつからなかったときのアラート
+        performSegue(withIdentifier: "screenTransition", sender: self)
     }
     
 }
