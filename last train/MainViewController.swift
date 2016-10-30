@@ -12,7 +12,6 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -31,5 +30,4 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
