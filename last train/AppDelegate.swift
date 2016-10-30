@@ -128,7 +128,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         let notification:UILocalNotification = UILocalNotification()
         notification.fireDate = Date(timeIntervalSinceNow: 10) //TODO 取得した終電時間に基づく値を設定
         notification.timeZone = TimeZone.autoupdatingCurrent
-        notification.alertBody = "そろそろ魔法が解けそうです"
+        notification.alertBody = "シンデレラ、馬車の時間が近づいてるよ！🐴"
         notification.soundName = UILocalNotificationDefaultSoundName
         
         //通知登録
