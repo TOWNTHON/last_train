@@ -23,8 +23,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        
+        // フィールドの初期化
+        lm = CLLocationManager()
+        longitude = CLLocationDegrees()
+        latitude = CLLocationDegrees()
+        
+        // 位置情報取得の許可を求めるメッセージの表示．必須．
+        lm.requestAlwaysAuthorization()
+    
+        // CLLocationManagerをDelegateに指定
+        lm.delegate = self
+        // 位置情報の精度を指定．任意，
+        // lm.desiredAccuracy = kCLLocationAccuracyBest
+        // 位置情報取得間隔を指定．指定した値（メートル）移動したら位置情報を更新する．任意．
+        // lm.distanceFilter = 1000
+
+        
+        
         // background fetch
         application.setMinimumBackgroundFetchInterval(Double(10)) //TODO 一旦10秒(本当は60 * 30 )
+        
+        
+        lm.stopUpdatingLocation()
+        
+        
+        
+        lm.stopUpdatingLocation()
         
         return true
     }
@@ -36,21 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         
         // 20時以降に起動
-        if (hour >= 20) {
-            // フィールドの初期化
-            lm = CLLocationManager()
-            longitude = CLLocationDegrees()
-            latitude = CLLocationDegrees()
-            
-            // CLLocationManagerをDelegateに指定
-            lm.delegate = self
-            
-            // 位置情報取得の許可を求めるメッセージの表示．必須．
-            lm.requestAlwaysAuthorization()
-            // 位置情報の精度を指定．任意，
-            // lm.desiredAccuracy = kCLLocationAccuracyBest
-            // 位置情報取得間隔を指定．指定した値（メートル）移動したら位置情報を更新する．任意．
-            // lm.distanceFilter = 1000
+        if (hour >= 2) { //TODO 試験起動よう
             
             // GPSの使用を開始する
             lm.startUpdatingLocation()
@@ -115,10 +126,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         //通知の設定
         let notification:UILocalNotification = UILocalNotification()
-        notification.fireDate = Date(timeIntervalSinceNow: 10)
+        notification.fireDate = Date(timeIntervalSinceNow: 10) //TODO 取得した終電時間に基づく値を設定
         notification.timeZone = TimeZone.autoupdatingCurrent
-        notification.alertBody = "10秒たちました"
-        notification.alertAction = "はい"
+        notification.alertBody = "そろそろ魔法が解けそうです"
         notification.soundName = UILocalNotificationDefaultSoundName
         
         //通知登録
