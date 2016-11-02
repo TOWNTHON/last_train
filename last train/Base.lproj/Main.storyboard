@@ -54,6 +54,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="myTrainStopSetButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x9R-gs-Bf2"/>
+                                    <segue destination="TAG-Dp-ANn" kind="show" id="ZcL-mk-Pun"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,7 +63,6 @@
                     <connections>
                         <outlet property="MyTrainStopName" destination="JBO-Wd-Jw7" id="RCi-8P-N7q"/>
                         <outlet property="walkingTime" destination="cB4-tz-KoU" id="YUj-4o-g9g"/>
-                        <segue destination="8Vt-pZ-XlV" kind="show" identifier="screenTransition" animates="NO" id="9IE-T7-KnN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -70,222 +70,59 @@
             <point key="canvasLocation" x="364" y="29.23538230884558"/>
         </scene>
         <!--Main View Controller-->
-        <scene sceneID="lRc-49-amX">
+        <scene sceneID="8to-Ko-njO">
             <objects>
-                <viewController storyboardIdentifier="next" id="8Vt-pZ-XlV" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="TAG-Dp-ANn" customClass="MainViewController" customModule="last_train" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yW8-29-TyH"/>
-                        <viewControllerLayoutGuide type="bottom" id="0xE-SR-PNZ"/>
+                        <viewControllerLayoutGuide type="top" id="Ea4-PL-rv1"/>
+                        <viewControllerLayoutGuide type="bottom" id="FlM-Vb-3lo"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AI6-1k-coZ">
+                    <view key="view" contentMode="scaleToFill" id="k08-31-oJe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinderella_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="6mg-Rf-FNW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinderella_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="bgC-wD-kb9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="銀座" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cow-Xw-O3h">
-                                <rect key="frame" x="162" y="272" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="東京" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2e-8C-LYX">
+                                <rect key="frame" x="97" y="258" width="159" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.10980392156862745" green="0.098039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.13333333333333333" green="0.12156862745098039" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvA-Xn-vbA">
-                                <rect key="frame" x="261" y="577" width="114" height="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mD-5r-FSf">
+                                <rect key="frame" x="97" y="328" width="159" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="anH-nz-DJr" kind="popoverPresentation" popoverAnchorView="vvA-Xn-vbA" id="i1c-Yr-4Uo">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKt-Rx-f7V">
-                                <rect key="frame" x="271" y="587" width="114" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1p-Os-axx">
-                                <rect key="frame" x="77" y="452" width="201" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.1333333333" green="0.1215686275" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV7-7K-KwP">
+                                <rect key="frame" x="76" y="452" width="201" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="cinderella_02-1.png"/>
                                 <connections>
-                                    <segue destination="Whv-gO-3V8" kind="show" animates="NO" id="aIK-0b-Tcz"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PN-8o-WvH">
-                                <rect key="frame" x="150" y="344" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.10980392160000001" green="0.098039215690000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oab-r5-Wxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1088.8" y="24.7376311844078"/>
-        </scene>
-        <!--Web View Controller-->
-        <scene sceneID="1mn-1R-uO7">
-            <objects>
-                <viewController id="Whv-gO-3V8" customClass="WebViewController" customModule="last_train" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CS6-JL-M1u"/>
-                        <viewControllerLayoutGuide type="bottom" id="t5C-yU-CXh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3MK-Kj-XJp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinderella_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ene-FE-Jlt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qel-9c-X1m">
-                                <rect key="frame" x="261" y="577" width="114" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="anH-nz-DJr" kind="showDetail" id="gKF-Za-J8K"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWS-Uv-v4J">
-                                <rect key="frame" x="75" y="455" width="201" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="cinderella_02-1.png"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="銀座" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDQ-mX-MW2">
-                                <rect key="frame" x="162" y="273" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.10980392160000001" green="0.098039215690000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9Z-J8-AyY">
-                                <rect key="frame" x="150" y="345" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.10980392160000001" green="0.098039215690000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tbK-Tc-C6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1089" y="759"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Mae-TN-sbe">
-            <objects>
-                <viewController id="anH-nz-DJr" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jwn-k9-gko"/>
-                        <viewControllerLayoutGuide type="bottom" id="Rrc-SE-Zq8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YYO-u1-V1N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinderella_03.png" translatesAutoresizingMaskIntoConstraints="NO" id="8yT-fO-Rkm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMY-dD-y55">
-                                <rect key="frame" x="143" y="444" width="123" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinderella_02-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Oc-XI-CiA">
-                                <rect key="frame" x="114" y="545" width="147.5" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lR-RG-djE">
-                                <rect key="frame" x="269" y="557" width="106" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="Y32-FI-10s" kind="show" id="woc-J7-oLq"/>
+                                    <action selector="checkRoot:" destination="TAG-Dp-ANn" eventType="touchUpInside" id="DXN-fS-zwI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GRS-Jh-fTq"/>
+                    <connections>
+                        <outlet property="lastTrainTime" destination="3mD-5r-FSf" id="4II-JR-gqh"/>
+                        <outlet property="nearTrainStop" destination="X2e-8C-LYX" id="npI-ri-MBd"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Zr-5o-RYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZI-ZI-ajw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807.2" y="34.632683658170919"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="7Mu-Mw-UMt">
-            <objects>
-                <viewController id="Y32-FI-10s" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Hdn-TC-y1L"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ap7-7R-mBX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TXz-dd-Bpy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinderella_04.png" translatesAutoresizingMaskIntoConstraints="NO" id="R2D-kd-N5M">
-                                <rect key="frame" x="-9" y="0.0" width="400" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfU-Pf-9uv">
-                                <rect key="frame" x="269" y="565" width="106" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="Of2-Gy-lPm" kind="show" id="JAG-GR-J7E"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWv-gE-gIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2549.5999999999999" y="24.7376311844078"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9Xi-U0-L9v">
-            <objects>
-                <viewController id="Of2-Gy-lPm" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="A4V-fd-vUk"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xwe-8p-hTd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kW0-LG-gaR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinderella_05.png" translatesAutoresizingMaskIntoConstraints="NO" id="wUn-lR-tHl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kIJ-gG-LQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3256.8000000000002" y="24.7376311844078"/>
+            <point key="canvasLocation" x="1304.8" y="28.335832083958024"/>
         </scene>
     </scenes>
     <resources>
         <image name="cinderella_01.png" width="375" height="667"/>
         <image name="cinderella_02-1.png" width="147" height="15"/>
         <image name="cinderella_02.png" width="375" height="667"/>
-        <image name="cinderella_03.png" width="375" height="667"/>
-        <image name="cinderella_04.png" width="375" height="667"/>
-        <image name="cinderella_05.png" width="375" height="667"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="gKF-Za-J8K"/>
-    </inferredMetricsTieBreakers>
 </document>
