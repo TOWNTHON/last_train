@@ -22,6 +22,7 @@
 		194D9DBF1DBA62F500DF11F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194D9DBD1DBA62F500DF11F6 /* LaunchScreen.storyboard */; };
 		4E96D3111DC5815D00005394 /* cinderella_05@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E96D3101DC5815D00005394 /* cinderella_05@2x.png */; };
 		4EF559AC1DCA2F1F00442D58 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF559AB1DCA2F1F00442D58 /* MainViewController.swift */; };
+		4EF559AE1DCA322900442D58 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF559AD1DCA322900442D58 /* AlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		194D9DC01DBA62F500DF11F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E96D3101DC5815D00005394 /* cinderella_05@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinderella_05@2x.png"; sourceTree = "<group>"; };
 		4EF559AB1DCA2F1F00442D58 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4EF559AD1DCA322900442D58 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		643696006286855AA14FC4F2 /* Pods-last train.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-last train.debug.xcconfig"; path = "Pods/Target Support Files/Pods-last train/Pods-last train.debug.xcconfig"; sourceTree = "<group>"; };
 		AD7AE25777489C462FE3519D /* Pods_last_train.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_last_train.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF606CBF9EB6040D9508C64 /* Pods-last train.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-last train.release.xcconfig"; path = "Pods/Target Support Files/Pods-last train/Pods-last train.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				194D9DB41DBA62F500DF11F6 /* AppDelegate.swift */,
 				194D9DB61DBA62F500DF11F6 /* ViewController.swift */,
 				194D9DB81DBA62F500DF11F6 /* Main.storyboard */,
+				4EF559AD1DCA322900442D58 /* AlarmViewController.swift */,
 				4EF559AB1DCA2F1F00442D58 /* MainViewController.swift */,
 				194D9DBB1DBA62F500DF11F6 /* Assets.xcassets */,
 				194D9DBD1DBA62F500DF11F6 /* LaunchScreen.storyboard */,
@@ -250,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF559AE1DCA322900442D58 /* AlarmViewController.swift in Sources */,
 				194D9DB71DBA62F500DF11F6 /* ViewController.swift in Sources */,
 				19435EBF1DC4571100D4B393 /* LastTrain.swift in Sources */,
 				194D9DB51DBA62F500DF11F6 /* AppDelegate.swift in Sources */,

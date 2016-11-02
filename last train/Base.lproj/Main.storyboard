@@ -119,10 +119,45 @@
             </objects>
             <point key="canvasLocation" x="1304.8" y="28.335832083958024"/>
         </scene>
+        <!--Alarm View Controller-->
+        <scene sceneID="74a-3G-kBH">
+            <objects>
+                <viewController id="E3z-WO-QJZ" customClass="AlarmViewController" customModule="last_train" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eam-B0-b84"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Df-sm-mOp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tDZ-PR-Ved">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinderella_03.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZmK-da-Vsm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdf-lb-DeF">
+                                <rect key="frame" x="142" y="424" width="89" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="remainingTime" destination="fdf-lb-DeF" id="lTB-Fz-OMH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icm-3d-peo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2165.5999999999999" y="35.532233883058474"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cinderella_01.png" width="375" height="667"/>
         <image name="cinderella_02-1.png" width="147" height="15"/>
         <image name="cinderella_02.png" width="375" height="667"/>
+        <image name="cinderella_03.png" width="375" height="667"/>
     </resources>
 </document>
