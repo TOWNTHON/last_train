@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         ud.set(walkingTime.text, forKey: "walkingTime")
         ud.synchronize()
          //TODO 駅名がみつからなかったときのアラート
-        performSegue(withIdentifier: "screenTransition", sender: self)
     }
     
 }
